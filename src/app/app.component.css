@@ -2,3 +2,8 @@
 body {
   padding-top: 2rem;
 }
+
+.card-extra {
+  text-align: center;
+  padding-top: 5px;
+}

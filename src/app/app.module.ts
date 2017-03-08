@@ -7,25 +7,24 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { TechnologyComponent } from './industries/technology/technology.component';
-import { HcLsComponent } from './industries/hc-ls/hc-ls.component';
-import { MediaEntertainmentComponent } from './industries/media-entertainment/media-entertainment.component';
-import { SupplyChainLogisticComponent } from './industries/supply-chain-logistic/supply-chain-logistic.component';
-import { TravelHospitalityComponent } from './industries/travel-hospitality/travel-hospitality.component';
-import { EnterpriseComponent } from './industries/enterprise/enterprise.component';
-import { OnlineRetailComponent } from './industries/online-retail/online-retail.component';
+import { CustomWebDevelopmentComponent } from './cmp_services/custom-web-development/custom-web-development.component';
+import { WebDesignComponent } from './cmp_services/web-design/web-design.component';
+import { UxDesignComponent } from './cmp_services/ux-design/ux-design.component';
+import { TestingQaComponent } from './cmp_services/testing-qa/testing-qa.component';
+import { SupportServiceComponent } from './cmp_services/support-service/support-service.component';
+import { InternetMarketingComponent } from './cmp_services/internet-marketing/internet-marketing.component';
+
 
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'about-us', component: AboutUsComponent },
-  { path: 'industry', children: [
-    { path: 'technology', component: TechnologyComponent },
-    { path: 'health_care_life_science', component: HcLsComponent },
-    { path: 'media_entertainment', component: MediaEntertainmentComponent },
-    { path: 'supply_chain_logistic', component: SupplyChainLogisticComponent },
-    { path: 'travel_hospitality', component: TravelHospitalityComponent },
-    { path: 'enterprise', component: EnterpriseComponent },
-    { path: 'online_retail', component: OnlineRetailComponent }
+  { path: 'services', children: [
+    { path: 'custom_web_development', component: CustomWebDevelopmentComponent },
+    { path: 'web_design', component: WebDesignComponent },
+    { path: 'testing_qa', component: TestingQaComponent },
+    { path: 'support_service', component: SupportServiceComponent },
+    { path: 'internet_marketing', component: InternetMarketingComponent },
+    { path: 'ux_design', component: UxDesignComponent }
   ] }
 ];
 
@@ -34,13 +33,12 @@ const appRoutes: Routes = [
     AppComponent,
     HomePageComponent,
     AboutUsComponent,
-    TechnologyComponent,
-    HcLsComponent,
-    MediaEntertainmentComponent,
-    SupplyChainLogisticComponent,
-    TravelHospitalityComponent,
-    EnterpriseComponent,
-    OnlineRetailComponent
+    CustomWebDevelopmentComponent,
+    WebDesignComponent,
+    UxDesignComponent,
+    TestingQaComponent,
+    SupportServiceComponent,
+    InternetMarketingComponent
   ],
   imports: [
     BrowserModule,

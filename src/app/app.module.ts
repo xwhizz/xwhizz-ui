@@ -12,6 +12,8 @@ import { WebDesignComponent } from './cmp_services/web-design/web-design.compone
 import { TestingQaComponent } from './cmp_services/testing-qa/testing-qa.component';
 import { SupportServiceComponent } from './cmp_services/support-service/support-service.component';
 import { InternetMarketingComponent } from './cmp_services/internet-marketing/internet-marketing.component';
+import { ClientExperienceComponent } from './client-experience/client-experience.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 const appRoutes: Routes = [
@@ -23,7 +25,9 @@ const appRoutes: Routes = [
     { path: 'testing_qa', component: TestingQaComponent },
     { path: 'support_service', component: SupportServiceComponent },
     { path: 'internet_marketing', component: InternetMarketingComponent }
-  ] }
+  ] },
+  { path: 'client-experience', component: ClientExperienceComponent },
+  { path: 'contact-us', component: ContactUsComponent }
 ];
 
 @NgModule({
@@ -35,7 +39,9 @@ const appRoutes: Routes = [
     WebDesignComponent,
     TestingQaComponent,
     SupportServiceComponent,
-    InternetMarketingComponent
+    InternetMarketingComponent,
+    ClientExperienceComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,

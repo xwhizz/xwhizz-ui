@@ -30,7 +30,12 @@ export class ContactUsComponent implements OnInit {
 
     return this.http.post(this.contactUsUrl, bodyString, options) // ...using post request
                      .map((res:Response) => res.json()) // ...and calling .json() on the response to return data
-                     .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
+                     .catch((error:any) => Observable.throw(error.json().error || 'Server error')) //...errors if any
+                     .subscribe(res => {
+                        console.log(res);
+                     }, err => {
+                        console.log(err);
+                     });
 
   }
 

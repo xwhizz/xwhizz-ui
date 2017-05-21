@@ -32,6 +32,12 @@
   <div class="card-block">
     <div class="row">
       <div class="col-6">
+        <div class="alert alert-success alert-dismissible" role="alert" [hidden]="!showLabel">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close" click="dismissLabel()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <strong>Well done! You successfully submitted request.</strong>
+        </div>
         <form #contactUsForm="ngForm" (ngSubmit)="onSubmit()">
           <div class="form-group" [ngClass]="{'has-danger': !(name.valid || name.pristine)}">
             <div class="col-8">

@@ -14,11 +14,16 @@ export class ContactUsComponent implements OnInit {
 
   model = new ContactUs('', '', '', '', '');
   contactUsUrl = '/api/v1/contactUs';
+  showLabel = false;
 
   constructor(private http: Http) {
   }
 
   ngOnInit() {
+  }
+
+  dismissLabel() {
+      this.showLabel = false;
   }
 
   onSubmit() {
@@ -29,13 +34,17 @@ export class ContactUsComponent implements OnInit {
     let options = new RequestOptions({ headers: headers }); // Create a request option
 
     return this.http.post(this.contactUsUrl, bodyString, options) // ...using post request
-                     .map((res:Response) => res.json()) // ...and calling .json() on the response to return data
-                     .catch((error:any) => Observable.throw(error.json().error || 'Server error')) //...errors if any
-                     .subscribe(res => {
-                        console.log(res);
-                     }, err => {
-                        console.log(err);
-                     });
+           .map((res:Response) => res.json()) // ...and calling .json() on the response to return data
+           .catch((error:any) => Observable.throw(error.json().error || 'Server error')) //...errors if any
+           .subscribe(res => {
+              console.log(res);
+              if(res === 'success') {
+                this.showLabel = true;
+                this.model = new ContactUs('', '', '', '', '');
+              }
+           }, err => {
+              console.log(err);
+           });
 
   }
 

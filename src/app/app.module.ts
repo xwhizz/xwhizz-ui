@@ -14,6 +14,7 @@ import { SupportServiceComponent } from './cmp_services/support-service/support-
 import { InternetMarketingComponent } from './cmp_services/internet-marketing/internet-marketing.component';
 import { ClientExperienceComponent } from './client-experience/client-experience.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { CareerComponent } from './career/career.component';
 
 
 const appRoutes: Routes = [
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
     { path: 'support_service', component: SupportServiceComponent },
     { path: 'internet_marketing', component: InternetMarketingComponent }
   ] },
+  { path: 'career', component: CareerComponent },
   { path: 'client-experience', component: ClientExperienceComponent },
   { path: 'contact-us', component: ContactUsComponent }
 ];
@@ -41,7 +43,8 @@ const appRoutes: Routes = [
     SupportServiceComponent,
     InternetMarketingComponent,
     ClientExperienceComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    CareerComponent
   ],
   imports: [
     BrowserModule,

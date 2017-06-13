@@ -15,13 +15,22 @@ import { InternetMarketingComponent } from './cmp_services/internet-marketing/in
 import { ClientExperienceComponent } from './client-experience/client-experience.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CareerComponent } from './career/career.component';
+import { CustomPhpDevelopmentComponent } from './cmp_services/custom-web-development/custom-php-development/custom-php-development.component';
+import { CustomWebDevelopmentHomeComponent } from './cmp_services/custom-web-development/custom-web-development-home/custom-web-development-home.component';
+import { ECommerceComponent } from './cmp_services/custom-web-development/e-commerce/e-commerce.component';
+import { CmsCustomisationComponent } from './cmp_services/custom-web-development/cms-customisation/cms-customisation.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'services', children: [
-    { path: 'custom_web_development', component: CustomWebDevelopmentComponent },
+    { path: 'custom_web_development', component: CustomWebDevelopmentComponent, children: [
+        { path: '', component: CustomWebDevelopmentHomeComponent },
+        { path: 'custom_php_development', component: CustomPhpDevelopmentComponent },
+        { path: 'e-commerce', component: ECommerceComponent },
+        { path: 'cms-customisation', component: CmsCustomisationComponent }
+    ] },
     { path: 'web_design', component: WebDesignComponent },
     { path: 'testing_qa', component: TestingQaComponent },
     { path: 'support_service', component: SupportServiceComponent },
@@ -44,7 +53,11 @@ const appRoutes: Routes = [
     InternetMarketingComponent,
     ClientExperienceComponent,
     ContactUsComponent,
-    CareerComponent
+    CareerComponent,
+    CustomPhpDevelopmentComponent,
+    CustomWebDevelopmentHomeComponent,
+    ECommerceComponent,
+    CmsCustomisationComponent
   ],
   imports: [
     BrowserModule,

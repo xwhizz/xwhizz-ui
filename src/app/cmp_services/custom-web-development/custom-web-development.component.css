@@ -8,4 +8,6 @@
 
 .fixed-top {
   top: 65px;
+  z-index: 999;
 }
+

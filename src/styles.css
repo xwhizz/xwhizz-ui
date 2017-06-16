@@ -46,3 +46,8 @@ a {
     text-decoration: none !important;
     color: #00f;
 }
+
+.img-inner-top {
+  margin-left: 0.5rem;
+  margin-top: 8rem;
+}

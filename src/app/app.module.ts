@@ -19,6 +19,10 @@ import { CustomPhpDevelopmentComponent } from './cmp_services/custom-web-develop
 import { CustomWebDevelopmentHomeComponent } from './cmp_services/custom-web-development/custom-web-development-home/custom-web-development-home.component';
 import { ECommerceComponent } from './cmp_services/custom-web-development/e-commerce/e-commerce.component';
 import { CmsCustomisationComponent } from './cmp_services/custom-web-development/cms-customisation/cms-customisation.component';
+import { WebDesignHomeComponent } from './cmp_services/web-design/web-design-home/web-design-home.component';
+import { WebDevelopmentComponent } from './cmp_services/web-design/web-development/web-development.component';
+import { GraphicsDesignComponent } from './cmp_services/web-design/graphics-design/graphics-design.component';
+import { PsdToHtmlComponent } from './cmp_services/web-design/psd-to-html/psd-to-html.component';
 
 
 const appRoutes: Routes = [
@@ -31,7 +35,12 @@ const appRoutes: Routes = [
         { path: 'e-commerce', component: ECommerceComponent },
         { path: 'cms-customisation', component: CmsCustomisationComponent }
     ] },
-    { path: 'web_design', component: WebDesignComponent },
+    { path: 'web_design', component: WebDesignComponent, children: [
+        { path: '', component: WebDesignHomeComponent },
+        { path: 'web_development', component: WebDevelopmentComponent },
+        { path: 'graphics_design', component: GraphicsDesignComponent },
+        { path: 'psd_to_html', component: PsdToHtmlComponent }
+    ] },
     { path: 'testing_qa', component: TestingQaComponent },
     { path: 'support_service', component: SupportServiceComponent },
     { path: 'internet_marketing', component: InternetMarketingComponent }
@@ -57,7 +66,11 @@ const appRoutes: Routes = [
     CustomPhpDevelopmentComponent,
     CustomWebDevelopmentHomeComponent,
     ECommerceComponent,
-    CmsCustomisationComponent
+    CmsCustomisationComponent,
+    WebDesignHomeComponent,
+    WebDevelopmentComponent,
+    GraphicsDesignComponent,
+    PsdToHtmlComponent
   ],
   imports: [
     BrowserModule,

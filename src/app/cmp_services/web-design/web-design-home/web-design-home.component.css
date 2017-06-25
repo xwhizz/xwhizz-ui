@@ -1,13 +1,8 @@
 .carousel {
     margin-bottom: 0rem;
+    margin-top: 7rem;
 }
 
 .jumbotron {
     text-align: center;
 }
-
-.fixed-top {
-  top: 65px;
-  z-index: 999;
-}
-

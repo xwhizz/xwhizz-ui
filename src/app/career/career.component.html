@@ -43,17 +43,51 @@
           <hr>
           <h3>Why Xwhizz</h3>
           <p></p>
-          <ul>
-            <li>Career and Development</li>
-            <li>Innovative Technology stack</li>
-            <li>Freedom to learn new technology</li>
-            <li>Work Life Balance</li>
-            <li>Reward and Recognition</li>
-            <li>Value and Leadership</li>
-          </ul>
-
         </div><!-- /.blog-sidebar -->
       </div><!-- /.row -->
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="tab">
+          <button class="tablinks" [ngClass]="{active: selectedTab == 0}" (click)="changeSelectedTab(0)">Career and Development</button>
+          <button class="tablinks" [ngClass]="{active: selectedTab == 1}" (click)="changeSelectedTab(1)">Innovative Technology stack</button>
+          <button class="tablinks" [ngClass]="{active: selectedTab == 2}" (click)="changeSelectedTab(2)">Freedom to learn new technology</button>
+          <button class="tablinks" [ngClass]="{active: selectedTab == 3}" (click)="changeSelectedTab(3)">Work Life Balance</button>
+          <button class="tablinks" [ngClass]="{active: selectedTab == 4}" (click)="changeSelectedTab(4)">Reward and Recognition</button>
+          <button class="tablinks" [ngClass]="{active: selectedTab == 5}" (click)="changeSelectedTab(5)">Value and Leadership</button>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div id="career" class="blog-post" *ngIf="selectedTab == 0">
+          <h3 class="blog-post-title">Career and Development</h3>
+          <p>London is the capital city of England.</p>
+        </div>
+
+        <div id="innovative" *ngIf="selectedTab == 1">
+          <h3>Innovative Technology stack</h3>
+          <p>Paris is the capital of France.</p>
+        </div>
+
+        <div id="technology" *ngIf="selectedTab == 2">
+          <h3>Freedom to learn new technology</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div id="balance" *ngIf="selectedTab == 3">
+          <h3>Work Life Balance</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div id="rewards" *ngIf="selectedTab == 4">
+          <h3>Reward and Recognition</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div id="value" *ngIf="selectedTab == 5">
+          <h3>Value and Leadership</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,89 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse" xmlns="http://www.w3.org/1999/html">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about-us" routerLinkActive="active">About us</a>
+      </li>
+      <li class="nav-item dropdown">
+        <div class="btn-group" role="group">
+          <a class="nav-link dropdown-toggle" href="http://example.com" id="services" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="dropdown-menu" aria-labelledby="services">
+            <a class="dropdown-item" routerLink="services/custom_web_development" routerLinkActive="active">Custom Web Development</a>
+            <a class="dropdown-item" routerLink="services/internet_marketing" routerLinkActive="active">Internet marketing</a>
+            <a class="dropdown-item" routerLink="services/web_design" routerLinkActive="active">Web Design</a>
+            <a class="dropdown-item" routerLink="services/testing_qa" routerLinkActive="active">Testing & QA</a>
+            <a class="dropdown-item" routerLink="services/support_service" routerLinkActive="active">Support Services</a>
+          </div>
+        </div>
+
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" routerLink="/client-experience" routerLinkActive="active">Client Experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/career" routerLinkActive="active">Careers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact-us" routerLinkActive="active">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://xwhizztech.blogspot.in/" target="_blank">Blog</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <!--<input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/xwhizz.png" class="rounded-circle" alt="Xwhizz Technology" width="40" height="40">
+        Xwhizz Technology
+      </a>
+    </form>
+  </div>
+</nav>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+<div class="jumbotron">
+  <h1>Axe and Hammer we use</h1>
+  <div class="et_pb_module et-waypoint et_pb_image et_pb_animation_left et_pb_image_0 et_always_center_on_mobile et-animated">
+    <img src="assets/images/tools-and-technologies-we-use.png" alt="tools and technologies we use to build websites" width="1080" height="39">
+  </div>
+</div>
+
+<div class="container marketing">
+  <!-- FOOTER -->
+  <footer>
+    <div class="row">
+      <div class="col-md-3">
+        <h3>About XWhizz</h3>
+        <p class="lead">
+          XWhizz is a technology consulting organization specializing in outsourced product engineering services. Our solutions are focused on modern technologies.
+        </p>
+      </div>
+      <div class="col-md-3">
+        <h3>Services</h3>
+        <ul class="list-unstyled">
+          <li><a routerLink="services/custom_web_development">Custom Web Development</a></li>
+          <li>Internet marketing</li>
+          <li>Web Design</li>
+          <li>Testing & QA</li>
+          <li>Support Services</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+
+      </div>
+    </div>
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2017 xWhizz, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</div>

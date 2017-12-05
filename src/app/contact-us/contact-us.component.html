@@ -1,109 +1,167 @@
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-  </ol>
-  <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-      <img class="first-slide" src="assets/images/banner-web-development.png" alt="First slide">
-      <div class="container">
-        <div class="carousel-caption d-none d-md-block text-left">
-          <!--<h1>Example headline.</h1>
-          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>-->
+<div id="main-content" class="middle-content">
+  <div class="breadcrumbs image-space overlay-theme-col" style="background-image: url(images/section-banner.jpeg)">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="breadcrumbs-inner">
+            <div class="breadcrumbs-title">
+              <h1>Contact us</h1>
+            </div>
+            <div class="breadcrumbs-menu">
+              <ul class="list-inline">
+                <li><a href="index.html">Home /</a></li>
+                <li>Contact Us</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+
 </div>
+<!-----------------END-------------->
 
-
-<div class="card">
-  <div class="card-header">
-    <h2>Contact Us</h2>
-  </div>
-  <div class="card-block">
+<section class="contact-wrapper">
+  <div class="container">
     <div class="row">
-      <div class="col-6">
-        <div class="alert alert-success alert-dismissible" role="alert" [hidden]="!showLabel">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close" click="dismissLabel()">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <strong>Well done! You successfully submitted request.</strong>
+      <div class="col-md-5">
+        <div class="contact-head">
+          <h2 class="small-text">Get in Touch</h2>
         </div>
-        <form #contactUsForm="ngForm" (ngSubmit)="onSubmit()">
-          <div class="form-group" [ngClass]="{'has-danger': !(name.valid || name.pristine)}">
-            <div class="col-8">
-              <input class="form-control" type="text" id="name" placeholder="Name" required
-                     [(ngModel)]="model.name" name="name"
-                     #name="ngModel">
-              <small [hidden]="name.valid || name.pristine" class="form-text text-muted">
-                Name is required
-              </small>
+        <ul class="list-creative">
+          <li>
+            <dl class="list-terms-medium list-terms-medium_secondary">
+              <dt>Address</dt>
+              <dd><a href="#">212 Prospect Ave, Brooklyn, New York United States</a></dd>
+            </dl>
+          </li>
+          <li>
+            <dl class="list-terms-medium">
+              <dt>Phones</dt>
+              <dd>
+                <ul class="list-comma">
+                  <li><a href="callto:#">+1-800-700-6200 </a></li>
+                  <li><a href="callto:#">+1-800-955-4567</a></li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl class="list-terms-medium list-terms-medium_tertiary">
+              <dt>E-mail</dt>
+              <dd>
+                <ul class="list-comma">
+                  <li><a href="mailto:#">mail@demolink.org</a></li>
+                  <li><a href="mailto:#">info@demolink.org</a></li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-7">
+        <div class="contact-head">
+          <h2 class="small-text">Contact Form</h2>
+        </div>
+        <!-- RD Mailform -->
+        <form class="contact-form">
+          <div class="range range-sm-bottom range-20">
+            <div class="col-sm-6">
+              <div class="form-wrap">
+                <input class="form-control form-control-has-validation" id="contact-name" name="name" required="" type="text"><span class="form-validation">The text field is required.</span>
+
+              </div>
             </div>
-          </div>
-          <div class="form-group" [ngClass]="{'has-danger': !(address.valid || address.pristine)}">
-            <div class="col-8">
-              <input class="form-control" type="search" id="address" placeholder="Address" required
-                     [(ngModel)]="model.address" name="address" #address="ngModel">
-              <small [hidden]="address.valid || address.pristine"
-                   class="form-text text-muted">
-                address is required
-              </small>
+            <div class="col-sm-6">
+              <div class="form-wrap">
+                <input class="form-control form-control-has-validation" id="contact-phone" name="phone" required="" type="text"><span class="form-validation">Only numbers are required</span>
+
+              </div>
             </div>
-          </div>
-          <div class="form-group" [ngClass]="{'has-danger': !(email.valid || email.pristine)}">
-            <div class="col-8">
-              <input class="form-control" type="email" id="email" placeholder="Email Address" required
-                     [(ngModel)]="model.email" name="email" #email="ngModel">
-              <small [hidden]="email.valid || email.pristine"
-                   class="form-text text-muted">
-                email is required
-              </small>
+            <div class="col-xs-12">
+              <div class="form-wrap">
+                <textarea class="form-control form-control-has-validation" required="" id="contact-message" name="message"></textarea><span class="form-validation">The text field is required.</span>
+              </div>
             </div>
-          </div>
-          <div class="form-group" [ngClass]="{'has-danger': !(telephone.valid || telephone.pristine)}">
-            <div class="col-8">
-              <input class="form-control" type="tel" id="telephone" placeholder="Telephone Number" required
-                     [(ngModel)]="model.telephone" name="telephone" #telephone="ngModel">
-              <small [hidden]="telephone.valid || telephone.pristine"
-                   class="form-text text-muted">
-                telephone is required
-              </small>
+            <div class="col-sm-6">
+              <div class="form-wrap">
+                <input class="form-control form-control-has-validation" id="contact-email" name="email" required="" type="email"><span class="form-validation">The text field is required.</span>
+              </div>
             </div>
-          </div>
-          <div class="form-group" [ngClass]="{'has-danger': !(notes.valid || notes.pristine)}">
-            <div class="col-8">
-              <input class="form-control" type="search" id="notes" placeholder="Notes" required
-                     [(ngModel)]="model.notes" name="notes" #notes="ngModel">
-              <small [hidden]="notes.valid || notes.pristine"
-                   class="form-text text-muted">
-                notes is required
-              </small>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-8">
-              <button type="submit" class="btn btn-success" [disabled]="!contactUsForm.form.valid">Submit</button>
+            <div class="col-sm-6">
+              <button class="button btn-block button-secondary" type="submit">Send Message</button>
             </div>
           </div>
         </form>
       </div>
-      <div class="col-4">
-        <p>We welcome an opportunity to provide you with more insight on xwhizz technology services and offerings.</p>
-        <p>For more information please contact us at +91-9727930925 or via e-mail.</p>
-        <p>D-301 Vaidehi Residency,</p>
-        <p>B/H Shalin-2, Vavol K Road,</p>
-        <p>Gandhinagar, Gujarat - 382016</p>
-        <p>Email: info@xwhizz.com</p>
+    </div>
+  </div>
+</section>
+
+<section  class="about-section-two">
+  <div class="gray-bg tb-padd-35">
+    <div class="container">
+      <div class="row">
+        <div class="brand-wrap-contact clearfix owl-carousel owl-theme">
+          <div class="brand-wrap-col">
+            <div class="brand-image">
+              <a href="#"><img src="images/brand1.png" alt="brand img"></a>
+            </div>
+          </div>
+          <div class="brand-wrap-col">
+            <div class="brand-image">
+              <a href="#"><img src="images/brand2.png" alt="brand img"></a>
+            </div>
+          </div>
+          <div class="brand-wrap-col">
+            <div class="brand-image">
+              <a href="#"><img src="images/brand3.png" alt="brand img"></a>
+            </div>
+          </div>
+          <div class="brand-wrap-col">
+            <div class="brand-image">
+              <a href="#"><img src="images/brand4.png" alt="brand img"></a>
+            </div>
+          </div>
+          <div class="brand-wrap-col">
+            <div class="brand-image">
+              <a href="#"><img src="images/brand5.png" alt="brand img"></a>
+            </div>
+          </div>
+
+        </div>
+        <script>
+                                $('.brand-wrap-contact').owlCarousel({
+                                    items: 5,
+                                    loop: true,
+                                    dots: false,
+                                    responsive: {
+                                        0: {
+                                            items: 1,
+                                        },
+                                        480: {
+                                            items: 2,
+                                        },
+                                        768: {
+                                            items: 3,
+                                        },
+                                        992: {
+                                            items: 4,
+                                        },
+                                        1167: {
+                                            items: 5,
+                                        },
+                                        1366: {
+                                            items: 5,
+                                        },
+                                        1400: {
+                                            items: 5,
+                                        }
+                                    }
+                                });
+                            </script>
       </div>
     </div>
   </div>
-</div>
+</section>

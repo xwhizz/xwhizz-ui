@@ -23,11 +23,16 @@ import { WebDesignHomeComponent } from './cmp_services/web-design/web-design-hom
 import { WebDevelopmentComponent } from './cmp_services/web-design/web-development/web-development.component';
 import { GraphicsDesignComponent } from './cmp_services/web-design/graphics-design/graphics-design.component';
 import { PsdToHtmlComponent } from './cmp_services/web-design/psd-to-html/psd-to-html.component';
+import { ServiceComponent } from './service/service.component';
+import { TeamComponent } from './team/team.component';
+import { BlogComponent } from './blog/blog.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'about-us', component: AboutUsComponent },
+  { path: 'service', component: ServiceComponent },
   { path: 'services', children: [
     { path: 'custom_web_development', component: CustomWebDevelopmentComponent, children: [
         { path: '', component: CustomWebDevelopmentHomeComponent },
@@ -47,6 +52,9 @@ const appRoutes: Routes = [
   ] },
   { path: 'career', component: CareerComponent },
   { path: 'client-experience', component: ClientExperienceComponent },
+  { path: 'portfolio', component: PortfolioComponent },
+  { path: 'team', component: TeamComponent },
+  { path: 'blog', component: BlogComponent },
   { path: 'contact-us', component: ContactUsComponent }
 ];
 
@@ -70,7 +78,11 @@ const appRoutes: Routes = [
     WebDesignHomeComponent,
     WebDevelopmentComponent,
     GraphicsDesignComponent,
-    PsdToHtmlComponent
+    PsdToHtmlComponent,
+    ServiceComponent,
+    TeamComponent,
+    BlogComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

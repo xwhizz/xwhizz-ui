@@ -1050,6 +1050,10 @@ section {
     padding-bottom: 35px;
 }
 
+.owl-carousel .owl-item img {
+  width: auto;
+}
+
 /*services*/
 .cta_top {
     background-color: rgba(255, 255, 255, 0.8);

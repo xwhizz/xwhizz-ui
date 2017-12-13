@@ -1,5 +1,10 @@
-
-  <div class="breadcrumbs image-space overlay-theme-col" style="background-image: url(images/section-banner.jpeg)">
+<div id="loader" class="pageload-overlay" data-opening="M 40,-65 145,80 -65,80 40,-65" data-closing="m 40,-65 0,0 L -65,80 40,-65">
+  <svg  width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
+    <path d="M 40,-65 145,80 40,-65"/>
+  </svg>
+</div>
+<!-- /pageload-overlay -->
+  <div class="breadcrumbs image-space overlay-theme-col" style="background-image: url(assets/images/section-banner.jpeg)">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -30,7 +35,7 @@
           <li>
             <dl class="list-terms-medium list-terms-medium_secondary">
               <dt>Address</dt>
-              <dd><a href="#">212 Prospect Ave, Brooklyn, New York United States</a></dd>
+              <dd><a href="#">D-301, Vaidehi Residency, Gandhinagar, Gujarat-382016</a></dd>
             </dl>
           </li>
           <li>
@@ -38,8 +43,8 @@
               <dt>Phones</dt>
               <dd>
                 <ul class="list-comma">
-                  <li><a href="callto:#">+1-800-700-6200 </a></li>
-                  <li><a href="callto:#">+1-800-955-4567</a></li>
+                  <li><a href="callto:#">+91-972-793-0925 </a></li>
+                  <li><a href="callto:#">+1-973-615-3497</a></li>
                 </ul>
               </dd>
             </dl>
@@ -49,8 +54,8 @@
               <dt>E-mail</dt>
               <dd>
                 <ul class="list-comma">
-                  <li><a href="mailto:#">mail@demolink.org</a></li>
-                  <li><a href="mailto:#">info@demolink.org</a></li>
+                  <li><a href="mailto:#">mail@xwhizz.com</a></li>
+                  <li><a href="mailto:#">info@xwhizz.com</a></li>
                 </ul>
               </dd>
             </dl>
@@ -61,103 +66,41 @@
         <div class="contact-head">
           <h2 class="small-text">Contact Form</h2>
         </div>
-        <!-- RD Mailform -->
-        <form class="contact-form">
+        <div class="alert alert-success alert-dismissible" role="alert" [hidden]="!showLabel">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close" click="dismissLabel()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <strong>Well done! You successfully submitted request.</strong>
+        </div>
+        <form class="contact-form" #contactUsForm="ngForm" (ngSubmit)="onSubmit()">
           <div class="range range-sm-bottom range-20">
             <div class="col-sm-6">
               <div class="form-wrap">
-                <input class="form-control form-control-has-validation" id="contact-name" name="name" required="" type="text"><span class="form-validation">The text field is required.</span>
-
+                <input class="form-control form-control-has-validation" placeholder="Name" id="name" [(ngModel)]="model.name" name="name"
+                       #name="ngModel" name="name" required="" type="text"><span class="form-validation">The text field is required.</span>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-wrap">
-                <input class="form-control form-control-has-validation" id="contact-phone" name="phone" required="" type="text"><span class="form-validation">Only numbers are required</span>
-
+                <input class="form-control form-control-has-validation" placeholder="Phone" id="telephone" [(ngModel)]="model.telephone" name="telephone" #telephone="ngModel" required="" type="text"><span class="form-validation">Only numbers are required</span>
               </div>
             </div>
             <div class="col-xs-12">
               <div class="form-wrap">
-                <textarea class="form-control form-control-has-validation" required="" id="contact-message" name="message"></textarea><span class="form-validation">The text field is required.</span>
+                <textarea class="form-control form-control-has-validation" placeholder="Message" required="" id="notes" [(ngModel)]="model.notes" name="notes" #notes="ngModel"></textarea><span class="form-validation">The text field is required.</span>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-wrap">
-                <input class="form-control form-control-has-validation" id="contact-email" name="email" required="" type="email"><span class="form-validation">The text field is required.</span>
+                <input class="form-control form-control-has-validation" placeholder="Email" id="email" placeholder="Email Address" required
+                       [(ngModel)]="model.email" name="email" #email="ngModel" required="" type="email"><span class="form-validation">The text field is required.</span>
               </div>
             </div>
             <div class="col-sm-6">
-              <button class="button btn-block button-secondary" type="submit">Send Message</button>
+              <button class="button btn-block button-secondary" type="submit" [disabled]="!contactUsForm.form.valid">Send Message</button>
             </div>
           </div>
         </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section  class="about-section-two">
-  <div class="gray-bg tb-padd-35">
-    <div class="container">
-      <div class="row">
-        <div class="brand-wrap-contact clearfix owl-carousel owl-theme">
-          <div class="brand-wrap-col">
-            <div class="brand-image">
-              <a href="#"><img src="images/brand1.png" alt="brand img"></a>
-            </div>
-          </div>
-          <div class="brand-wrap-col">
-            <div class="brand-image">
-              <a href="#"><img src="images/brand2.png" alt="brand img"></a>
-            </div>
-          </div>
-          <div class="brand-wrap-col">
-            <div class="brand-image">
-              <a href="#"><img src="images/brand3.png" alt="brand img"></a>
-            </div>
-          </div>
-          <div class="brand-wrap-col">
-            <div class="brand-image">
-              <a href="#"><img src="images/brand4.png" alt="brand img"></a>
-            </div>
-          </div>
-          <div class="brand-wrap-col">
-            <div class="brand-image">
-              <a href="#"><img src="images/brand5.png" alt="brand img"></a>
-            </div>
-          </div>
-
-        </div>
-        <script>
-                                $('.brand-wrap-contact').owlCarousel({
-                                    items: 5,
-                                    loop: true,
-                                    dots: false,
-                                    responsive: {
-                                        0: {
-                                            items: 1,
-                                        },
-                                        480: {
-                                            items: 2,
-                                        },
-                                        768: {
-                                            items: 3,
-                                        },
-                                        992: {
-                                            items: 4,
-                                        },
-                                        1167: {
-                                            items: 5,
-                                        },
-                                        1366: {
-                                            items: 5,
-                                        },
-                                        1400: {
-                                            items: 5,
-                                        }
-                                    }
-                                });
-                            </script>
       </div>
     </div>
   </div>
